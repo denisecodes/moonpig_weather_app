@@ -6,5 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/find_weather', methods=['POST'])
+def find_weather():
+    print("finding weather")
+    return render_template('index.html')
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
