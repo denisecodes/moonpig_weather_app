@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request
 import requests
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -17,6 +21,7 @@ def find_weather():
         "api": "no"
     }
     response = requests.get("http://api.weatherapi.com/v1/current.json", params=parameters)
+    print(response)
     print(f"User's postcode: {user_postcode}")
     data = response.json()
     location_data = data['location']
