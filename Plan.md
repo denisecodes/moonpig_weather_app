@@ -8,7 +8,8 @@
 
 # Tech stack
 
-# Find a weather api to use
+# Find a weather api to use -> OpenWeatherAPI
+
 
 # Python
 
@@ -24,8 +25,14 @@
 
 
 # 2. User then see the current weather of the place with
+# Location
+# Current date and time
+# Picture of location?
 
 # a. Sunny/Rainy/Cloudy
-# b. Temperature
-# c. Wind speed?
+# b. current temp
+# c. Min temp
+# d. Max temp
+# e. Wind speed?
+# f. Humidity
 
