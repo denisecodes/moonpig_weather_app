@@ -1,3 +1,7 @@
+.body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 .center {
     display: flex;
     flex-direction: column;
@@ -13,8 +17,9 @@
 }
 
 .search-bar {
-    font-family:Arial, Helvetica, sans-serif;
-
+    margin-right: 10px;
+    width: 800px;
+    height: auto;
 }
 
 .input-group .search-bar {
@@ -27,4 +32,47 @@
     border-radius: 5px;
     border: none;
     color: white;
+}
+
+/* Weather.html classes */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.moonpig_logo {
+    margin-right: 380px;
+}
+
+.search-bar-items {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 350px;
+}
+
+.weather-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.left-box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.right-box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.weather-icon {
+    width: 200px;
 }
