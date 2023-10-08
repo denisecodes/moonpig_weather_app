@@ -10,18 +10,22 @@
     <script src="https://kit.fontawesome.com/142a7d352d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <img class="logo" src="{{url_for('static', filename='images/moonpig_logo.png')}}" alt="Moonpig Logo"/>
-    <form action="/show_weather" method="POST">
-    <div class="container mt-4">
-        <div class="input-group">
-            <input type="search" class="search-bar form-control mr-sm-2" id="search-bar" name="search-bar" placeholder="Search Weather in a City or Postcode" required>
-            <div class="input-group-append">
-                <button class="btn search-btn" type="submit">
-                <i class="fas fa-search"></i>
-                </button>
-            </div>
+    <div class="center"> 
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/moonpig_ad_image.jpeg')}}" alt="A picture of pigs with the text 'The moonpigs have landed'"/>
         </div>
+        <form action="/show_weather" method="POST">
+            <div class="container mt-4">
+                <div class="input-group">
+                    <input type="search" class="search-bar form-control mr-sm-2" id="search-bar" name="search-bar" placeholder="Search Weather in a City or Postcode" required>
+                    <div class="input-group-append">
+                        <button class="btn search-btn" type="submit">
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    </form>
 </body>
 </html>
