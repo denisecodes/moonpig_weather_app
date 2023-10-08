@@ -1,0 +1,13 @@
+.logo {
+    
+}
+
+.search-bar {
+    font-family:Arial, Helvetica, sans-serif;
+}
+.search-btn {
+    background-color: #ffbbc7;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
