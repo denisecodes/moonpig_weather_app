@@ -7,15 +7,14 @@
 </head>
 <body>
     {% if location and current %}
-    <p>Display some weather</p>
-    <p>Location: {{ location['name'] }}</p>
-    <p>Date: {{ location['localtime'].split(" ")[0] }}</p>
-    <p>Time: {{ location['localtime'].split(" ")[1] }}</p>
+    <p>{{ location['name'] }}{% if location['region'] %}, {{ location['region'] }} {% endif %}</p>
+    <p>Today {{ date }} at {{ time }}</p>
     <p>Weather is {{ current['condition']['text']}}</p>
     <img src="{{ current['condition']['icon'] }}">
     <p>Temp: {{ current['temp_c']}}°C</p>
     <p>Wind Speed: {{ current['wind_mph']}}mph</p>
     <p>Humidity: {{ current['humidity'] }}%</p>
+    <p>UV: {{ current['uv'] }}</p>
     {% endif %}
 </body>
 </html>
