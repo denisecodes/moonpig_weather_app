@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, url_for
 import os
 from dotenv import load_dotenv
 import requests
+from datetime import datetime
 
 # Load environment variables from .env
 load_dotenv()
@@ -25,10 +26,15 @@ def show_weather():
     print(f"User's input: {user_input}")
     data = response.json()
     location_data = data['location']
-    print(location_data)
+    date = location_data['localtime'].split(" ")[0]
+    # print(location_data)
     current_data = data['current']
-    print(current_data)
-    return render_template('weather.html', location=location_data, current=current_data)
+    date_object = datetime.strptime(date, "%Y-%m-%d")
+    formatted_date = date_object.strftime("%b %d")
+    print(formatted_date)
+    time = location_data['localtime'].split(" ")[1] 
+    # print(current_data)
+    return render_template('weather.html', location=location_data, current=current_data, date=formatted_date, time=time)
 
 if __name__ == '__main__':
     app.run(debug=True)
